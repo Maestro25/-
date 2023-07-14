@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="contact-form/form-processing.php" enctype="multipart/form-data" class="contact-form" novalidate>
+        <div class="form-group">
+            <label for="name" class="control-label">ФИО</label>
+            <input type="text" name="name" id="name" class="name-input form-control" placeholder="Ваше имя:"
+                aria-invalid="false" aria-describedby="nameHint" required="required" />
+                <div class="invalid-feedback"></div>
+            <p class="hint visually-hidden" id="nameHint">Поле не может быть пустым.</p>
+        </div>
+        <div class="form-group form-agree form-check">
+            <label for="email" class="control-label">E-mail</label>
+            <input type="email" name="email" id="email" class="email-input form-control"
+                placeholder="Ваш E-mail:" aria-invalid="false" aria-describedby="emailHint"
+                required="required" />
+                <div class="invalid-feedback"></div>
+            <p class="hint visually-hidden" id="emailHint">Некорректный Email.</p>
+        </div>
+        <div class="form-group">
+            <label for="tel" class="control-label">Тел.</label>
+            <input type="tel" name="tel" id="tel" class="tel-input form-control" aria-invalid="false"
+                aria-describedby="telHint" maxlenght="11" placeholder="Ваш номер телефона:"
+                required="required" />
+                <div class="invalid-feedback"></div>
+            <p class="hint visually-hidden" id="telHint">Некорректный формат номера.</p>
+        </div>
+        <div class="form-group">
+            <textarea name="message" id="message" rows="4" class="message-input form-control"
+                placeholder="Опишите проблему или оставьте поле пустым" maxlength="200"></textarea>
+                <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
+
+        <div class="form-submit">
+            <button type="submit">Отправить сообщение</button>
+          </div>
+        <label class="policy-accept" for="submit-button">Нажимая кнопку “Отправить”, я даю согласие
+            на обработку <a href="/policy.html">персональных данных</a></label>
+        <div class="form-success form-success_hide">
+            <div class="form-success__message">Форма успешно отправлена.</div>
+        </div>
+    </form>
+</body>
+</html>
